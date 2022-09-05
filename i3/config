@@ -187,7 +187,11 @@ bar {
         status_command i3status
 }
 
-# MY CONFIGS:
+
+#--------------------------------------------------------------------------- 
+# MY CONFIGS
+#--------------------------------------------------------------------------- 
+
 # Autostart apps and commands
 exec --no-startup-id xfce4-terminal 
 exec --no-startup-id firefox &
@@ -196,22 +200,12 @@ exec --no-startup-id obsidian &
 # Run some scripts until system starting
 exec --no-startup-id ~/linux_configs/arch/StartupScript.sh
 
-# Pulling my configs from remote repos
-# exec --no-startup-id ~/linux_configs/arch/ConfigSync.sh get
-# exec --no-startup-id ~/linux_configs/arch/ZKpushpull.sh pull
-
 # Assigning apps to workspaces
 assign [class="firefox"]$ws3
 assign [class="obsidian"]$ws2
 
 # Hotkeys: sound, brightness, screenlock
-#bindsym $mod+Control+Left exec --no-startup-id amixer -c 0 set Master 10%-
-#bindsym $mod+Control+Right exec --no-startup-id amixer -c 0 set Master 10%+
 bindsym $mod+Control+Up exec --no-startup-id xbacklight -inc 10
 bindsym $mod+Control+Down exec --no-startup-id xbacklight -dec 10
 bindsym $mod+Control+l exec --no-startup-id ~/.config/i3/i3lockscript.sh
-
-# i3 look
-
-
 

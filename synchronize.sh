@@ -18,40 +18,43 @@ cp -r $SCRIPT_PARENT_DIRECTORY/* ~/.config/
 # MAKING SYMLINKS
 # --------------------------------------------------
 
-# bashrc
-ln $SCRIPT_PARENT_DIRECTORY/.bashrc ~/
+# BASHRC
+ln -f $SCRIPT_PARENT_DIRECTORY/.bashrc ~/
 source ~/.bashrc
 
-# i3wm
-ln $SCRIPT_PARENT_DIRECTORY/i3/config ~/.config/i3/
-ln $SCRIPT_PARENT_DIRECTORY/i3/i3lockscript.sh ~/.config/i3/
-ln $SCRIPT_PARENT_DIRECTORY/i3/overlay.png ~/.config/i3/
+# XSESSION FILE
+ln -f $SCRIPT_PARENT_DIRECTORY/.xsession ~/
 
-ln $SCRIPT_PARENT_DIRECTORY/i3status/config ~/.config/i3status/
+# i3wm
+ln -f $SCRIPT_PARENT_DIRECTORY/i3/config ~/.config/i3/
+ln -f $SCRIPT_PARENT_DIRECTORY/i3/i3lockscript.sh ~/.config/i3/
+ln -f $SCRIPT_PARENT_DIRECTORY/i3/overlay.png ~/.config/i3/
+
+ln -f $SCRIPT_PARENT_DIRECTORY/i3status/config ~/.config/i3status/
 
 # XFCE4-TERMINAL
-ln $SCRIPT_PARENT_DIRECTORY/xfce4/terminal/terminalrc ~/.config/xfce4/terminal
+ln -f $SCRIPT_PARENT_DIRECTORY/xfce4/terminal/terminalrc ~/.config/xfce4/terminal
 
 # Midnight Commander
-ln $SCRIPT_PARENT_DIRECTORY/mc/mc.ext ~/.config/mc/
-ln $SCRIPT_PARENT_DIRECTORY/mc/mc.keymap ~/.config/mc/
+ln -f $SCRIPT_PARENT_DIRECTORY/mc/mc.ext ~/.config/mc/
+ln -f $SCRIPT_PARENT_DIRECTORY/mc/mc.keymap ~/.config/mc/
 
 # Image Viewer Geeqie
-ln $SCRIPT_PARENT_DIRECTORY/geeqie/default_window_layout.xml ~/.config/geeqie/
-ln $SCRIPT_PARENT_DIRECTORY/geeqie/geeqierc.xml ~/.config/geeqie/
+ln -f $SCRIPT_PARENT_DIRECTORY/geeqie/default_window_layout.xml ~/.config/geeqie/
+ln -f $SCRIPT_PARENT_DIRECTORY/geeqie/geeqierc.xml ~/.config/geeqie/
 
 # VIM 
-ln $SCRIPT_PARENT_DIRECTORY/.vimrc ~/
+ln -f $SCRIPT_PARENT_DIRECTORY/.vimrc ~/
 
 # NEOVIM
-ln $SCRIPT_PARENT_DIRECTORY/nvim/init.lua ~/.config/nvim/
-ln $SCRIPT_PARENT_DIRECTORY/nvim/lua/keymaps.lua ~/.config/nvim/lua/
-ln $SCRIPT_PARENT_DIRECTORY/nvim/lua/plugins.lua ~/.config/nvim/lua/
-ln $SCRIPT_PARENT_DIRECTORY/nvim/lua/settings.lua ~/.config/nvim/lua/
+ln -f $SCRIPT_PARENT_DIRECTORY/nvim/init.lua ~/.config/nvim/
+ln -f $SCRIPT_PARENT_DIRECTORY/nvim/lua/keymaps.lua ~/.config/nvim/lua/
+ln -f $SCRIPT_PARENT_DIRECTORY/nvim/lua/plugins.lua ~/.config/nvim/lua/
+ln -f $SCRIPT_PARENT_DIRECTORY/nvim/lua/settings.lua ~/.config/nvim/lua/
 
 # VIFM (filemanager)
-ln $SCRIPT_PARENT_DIRECTORY/vifm/vifmrc ~/.config/vifm/
-ln $SCRIPT_PARENT_DIRECTORY/vifm/colors/palenight.vifm ~/.config/vifm/colors/
+ln -f $SCRIPT_PARENT_DIRECTORY/vifm/vifmrc ~/.config/vifm/
+ln -f $SCRIPT_PARENT_DIRECTORY/vifm/colors/palenight.vifm ~/.config/vifm/colors/
 
 
 # --------------------------------------------------
