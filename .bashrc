@@ -29,8 +29,8 @@ alias v='nvim'
 alias f='vifm'
 alias bluetooth='blueman-manager'
 
-alias pull='CFpull; ZKpull'
-alias push='CFpush; ZKpush'
+alias pull='~/linux_configs/arch/StartupScript.sh'
+alias push='shutdownscript'
 alias off='shutdownscript; shutdown'
 alias reb='push; reboot'
 
