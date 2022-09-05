@@ -11,12 +11,16 @@ SCRIPT_ABSOLUTE_FILENAME=`readlink -e "$0"`
 SCRIPT_PARENT_DIRECTORY=`dirname "$ABSOLUTE_FILENAME"`
 
 # Copy all from script dir for make folder hierarchy:
-cp $SCRIPT_PARENT_DIRECTORY/* ~/.config/
+cp -r $SCRIPT_PARENT_DIRECTORY/* ~/.config/
 
 
 # --------------------------------------------------
 # MAKING SYMLINKS
 # --------------------------------------------------
+
+# bashrc
+ln $SCRIPT_PARENT_DIRECTORY/.bashrc ~/
+source ~/.bashrc
 
 # i3wm
 ln $SCRIPT_PARENT_DIRECTORY/i3/config ~/.config/i3/
@@ -33,21 +37,20 @@ ln $SCRIPT_PARENT_DIRECTORY/mc/mc.ext ~/.config/mc/
 ln $SCRIPT_PARENT_DIRECTORY/mc/mc.keymap ~/.config/mc/
 
 # Image Viewer Geeqie
-ln $SCRIPT_PARENT_DIRECTORY/geeqie/default_window_layout.xml ~/.config/geekie/
-ln $SCRIPT_PARENT_DIRECTORY/geeqie/geekierc.xml ~/.config/geekie/
+ln $SCRIPT_PARENT_DIRECTORY/geeqie/default_window_layout.xml ~/.config/geeqie/
+ln $SCRIPT_PARENT_DIRECTORY/geeqie/geeqierc.xml ~/.config/geeqie/
 
-# vim 
+# VIM 
 ln $SCRIPT_PARENT_DIRECTORY/.vimrc ~/
 
 # NEOVIM
-ln $SCRIPT_PARENT_DIRECTORY/nvim/init.lua ~/.cofig/nvim/
-ln $SCRIPT_PARENT_DIRECTORY/nvim/lua/keymaps.lua ~/.cofig/nvim/lua/
-ln $SCRIPT_PARENT_DIRECTORY/nvim/lua/plugins.lua ~/.cofig/nvim/lua/
-ln $SCRIPT_PARENT_DIRECTORY/nvim/lua/settings.lua ~/.cofig/nvim/lua/
+ln $SCRIPT_PARENT_DIRECTORY/nvim/init.lua ~/.config/nvim/
+ln $SCRIPT_PARENT_DIRECTORY/nvim/lua/keymaps.lua ~/.config/nvim/lua/
+ln $SCRIPT_PARENT_DIRECTORY/nvim/lua/plugins.lua ~/.config/nvim/lua/
+ln $SCRIPT_PARENT_DIRECTORY/nvim/lua/settings.lua ~/.config/nvim/lua/
 
 # VIFM (filemanager)
-cp $SCRIPT_PARENT_DIRECTORY/vifm ~/.config/
-ln $SCRIPT_PARENT_DIRECTORY/vifm/vimrc ~/.config/vifm/
+ln $SCRIPT_PARENT_DIRECTORY/vifm/vifmrc ~/.config/vifm/
 ln $SCRIPT_PARENT_DIRECTORY/vifm/colors/palenight.vifm ~/.config/vifm/colors/
 
 
