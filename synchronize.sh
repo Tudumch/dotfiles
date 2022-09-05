@@ -62,3 +62,5 @@ ln -f $SCRIPT_PARENT_DIRECTORY/vifm/colors/palenight.vifm ~/.config/vifm/colors/
 # --------------------------------------------------
 rm ~/.config/install.sh
 rm ~/.config/synchronize.sh
+echo 
+echo Dotfiles synchronization finished!
