@@ -13,6 +13,13 @@ SCRIPT_PARENT_DIRECTORY=`dirname "$ABSOLUTE_FILENAME"`
 # ----------------------------------------------------------------------------- 
 # Install
 # ----------------------------------------------------------------------------- 
+echo
+echo
+echo WARNING! This script will REPLACE your dotfiles in home directory!
+echo .bashrc and .xsession will be replaced too!
+echo
+echo If you agree - press any key, if no - press CTRL+C
+read
 
 sudo pacman -S ttf-font-awesome --noconfirm # font for icons in i3-statusbar
  
