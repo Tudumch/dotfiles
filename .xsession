@@ -1,4 +1,4 @@
-xautolock -time 10 -locker ~/linux_configs/arch/configs/i3/i3lockscript.sh &
+xautolock -time 10 -locker ~/.config/i3/i3lockscript.sh &
 numlockx &
 blueman-applet &
 pasystray & # sound-applet for pulseaudio

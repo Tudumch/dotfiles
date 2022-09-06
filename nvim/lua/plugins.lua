@@ -32,6 +32,10 @@ return require('packer').startup(function()
     opt = true,
     cmd = {'NvimTreeToggle'}, 
     config = function() require'nvim-tree'.setup {} end, }
+    use { 'kyazdani42/nvim-web-devicons',
+    opt = true,
+    cmd = {'NvimTreeToggle'} }
+
 
     -- Навигация внутри файла по классам и функциям
     use 'majutsushi/tagbar'
@@ -105,5 +109,7 @@ return require('packer').startup(function()
     use 'cohama/lexima.vim'
     -- Линтер, работает для всех языков
     use 'dense-analysis/ale'
+    -- Diff для удобного мерджа
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
 end)

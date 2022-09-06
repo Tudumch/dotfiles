@@ -37,6 +37,8 @@ alias reb='push; reboot'
 alias lockoff='mv ~/.config/i3/i3lockscript.sh ~/.config/i3/i3lockscript.sh1'
 alias lockon='mv ~/.config/i3/i3lockscript.sh1 ~/.config/i3/i3lockscript.sh'
 
+alias pv='source ./venv/bin/activate' # активация venv для Python-проекта
+
 # Specific aliases
 alias steam='flatpak run com.valvesoftware.Steam'
 
