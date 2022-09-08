@@ -33,8 +33,8 @@ alias push='~/linux_configs/arch/ShutDownScript.sh'
 alias off='push; shutdown'
 alias reb='push; reboot'
 
-alias lockoff='mv ~/.config/i3/i3lockscript.sh ~/.config/i3/i3lockscript.sh1'
-alias lockon='mv ~/.config/i3/i3lockscript.sh1 ~/.config/i3/i3lockscript.sh'
+alias lockoff='~/.config/i3/screenlocker_switcher.sh off'
+alias lockon='~/.config/i3/screenlocker_switcher.sh'
 
 alias pv='source ./venv/bin/activate' # активация venv для Python-проекта
 
@@ -42,5 +42,6 @@ alias pv='source ./venv/bin/activate' # активация venv для Python-п
 alias steam='flatpak run com.valvesoftware.Steam'
 
 source ~/linux_configs/arch/SysUpdateChecker.sh
+source ~/.config/i3/screenlocker_var
 source /etc/profile.d/vte.sh
 

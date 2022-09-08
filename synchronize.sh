@@ -31,6 +31,7 @@ fi
 # i3wm
 ln -f $SCRIPT_PARENT_DIRECTORY/i3/config ~/.config/i3/
 ln -f $SCRIPT_PARENT_DIRECTORY/i3/i3lockscript.sh ~/.config/i3/
+ln -f $SCRIPT_PARENT_DIRECTORY/i3/screenlocker_switcher.sh ~/.config/i3/
 ln -f $SCRIPT_PARENT_DIRECTORY/i3/overlay.png ~/.config/i3/
 
 ln -f $SCRIPT_PARENT_DIRECTORY/i3status/config ~/.config/i3status/
