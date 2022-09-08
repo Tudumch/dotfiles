@@ -21,7 +21,6 @@ alias ZKpull='~/linux_configs/arch/ZKpushpull.sh pull'
 alias ZKpush='~/linux_configs/arch/ZKpushpull.sh push'
 
 alias update='~/linux_configs/arch/SysUpdateChecker.sh'
-alias shutdownscript='~/linux_configs/arch/ShutDownScript.sh'
 
 # Universal aliases
 alias shutdown='shutdown now'
@@ -30,8 +29,8 @@ alias f='vifm'
 alias bluetooth='blueman-manager'
 
 alias pull='~/linux_configs/arch/StartupScript.sh'
-alias push='shutdownscript'
-alias off='shutdownscript; shutdown'
+alias push='~/linux_configs/arch/ShutDownScript.sh'
+alias off='push; shutdown'
 alias reb='push; reboot'
 
 alias lockoff='mv ~/.config/i3/i3lockscript.sh ~/.config/i3/i3lockscript.sh1'

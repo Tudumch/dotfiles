@@ -16,7 +16,12 @@ SCRIPT_PARENT_DIRECTORY=`dirname "$ABSOLUTE_FILENAME"`
 echo
 echo
 echo WARNING! This script will REPLACE your dotfiles in home directory!
-echo .bashrc and .xsession will be replaced too!
+
+if [[ $1 == full ]]
+then
+    echo .bashrc and .xsession will be replaced too!
+fi
+
 echo
 echo If you agree - press any key, if no - press CTRL+C
 read
@@ -41,4 +46,10 @@ sudo pacman -S geeqie --noconfirm
 # ----------------------------------------------------------------------------- 
 # DOTFILES SYNC
 # ----------------------------------------------------------------------------- 
-$SCRIPT_PARENT_DIRECTORY/synchronize.sh
+
+if [[ $1 == full ]]
+then
+    $SCRIPT_PARENT_DIRECTORY/synchronize.sh full
+else
+    $SCRIPT_PARENT_DIRECTORY/synchronize.sh
+fi

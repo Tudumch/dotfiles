@@ -18,12 +18,15 @@ cp -r $SCRIPT_PARENT_DIRECTORY/* ~/.config/
 # MAKING SYMLINKS
 # --------------------------------------------------
 
-# BASHRC
-ln -f $SCRIPT_PARENT_DIRECTORY/.bashrc ~/
-source ~/.bashrc
+if [[ $1 == full ]]
+then
+    # BASHRC
+    ln -f $SCRIPT_PARENT_DIRECTORY/.bashrc ~/
+    source ~/.bashrc
 
-# XSESSION FILE
-ln -f $SCRIPT_PARENT_DIRECTORY/.xsession ~/
+    # XSESSION FILE
+    ln -f $SCRIPT_PARENT_DIRECTORY/.xsession ~/
+fi
 
 # i3wm
 ln -f $SCRIPT_PARENT_DIRECTORY/i3/config ~/.config/i3/
