@@ -52,12 +52,12 @@ return require('packer').startup(function()
     config = function() require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end }
 
+
     -----------------------------------------------------------
     -- LSP и автодополнялка
     -----------------------------------------------------------
 
     -- Highlight, edit, and navigate code using a fast incremental parsing library
-    use 'nvim-treesitter/nvim-treesitter'
     -- Collection of configurations for built-in LSP client
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'

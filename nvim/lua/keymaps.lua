@@ -44,10 +44,10 @@ map('n', '<F1>', '', default_opts)
 map('n', '<S-F1>', '', default_opts)
 -- <F2> очищаем последний поиск с подсветкой
 map('n', '<F2>', ':nohl<CR>', default_opts)
--- <F3> дерево файлов - закрыть.
-map('n', '<F3>', ':NvimTreeToggle<CR>:NvimTreeRefresh<CR>', default_opts)
--- Shift+F3 дерево файлов - открыть.
-map('n', '<S-F3>', ':NvimTreeOpen<CR>', default_opts)
+-- <F3> дерево файлов дефолтного вимовского NetRwTree.
+map('n', '<F3>', ':Vex<CR> 30<C-w><<>gh', default_opts)
+-- Shift+F3 
+map('n', '<S-F3>', '', default_opts)
 -- <F4>  Показ дерева классов и функций, плагин majutsushi/tagbar
 map('n', '<F4>', ':TagbarToggle<CR>', default_opts)
 -- <F5> 

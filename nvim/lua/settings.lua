@@ -10,16 +10,21 @@ opt.colorcolumn = '80'              -- Разделитель на 80 симво
 opt.cursorline = true               -- Подсветка строки с курсором
 opt.spelllang= { 'en_us', 'ru' }    -- Словари рус eng
 opt.number = true                   -- Включаем нумерацию строк
-opt.relativenumber = true           -- Вкл. относительную нумерацию строк
+opt.relativenumber = false           -- Вкл. относительную нумерацию строк
 opt.so=999                          -- Курсор всегда в центре экрана
 opt.undofile = true                 -- Возможность отката назад
 opt.splitright = true               -- vertical split вправо
 opt.splitbelow = true               -- horizontal split вниз
+opt.autochdir = true
 
 -- Настройки встроенного в nvim файлового менеджера
 g.netrw_banner = 0        -- убрать верхнюю инфо-панель
 g.netrw_liststyle = 3     -- древовидное отображение иерархии файлов
 g.netrw_browse_split = 3  -- открывать файлы в новой вкладке
+g.netrw_keepdir=0         -- автоизменение рабочей директории во время навигации
+-- по умолчанию скрывать скрытые файлы. Показать файлы: 'gh'
+ghregex = '\\(^\\|\\s\\s\\)\\zs\\.\\S\\+'
+g.netrw_list_hide=ghregex
 -----------------------------------------------------------
 -- Цветовая схема
 -----------------------------------------------------------
@@ -75,7 +80,6 @@ g.ale_fix_on_save = 1
 -- Запуск линтера, только при сохранении
 g.ale_lint_on_text_changed = 'never'
 g.ale_lint_on_insert_leave = 0
-
 -- Изменяем дефолтные кнопки у плагина Comment
 local Comment = require 'Comment'
 Comment.setup { opleader = {line = '<leader>gc'} }
