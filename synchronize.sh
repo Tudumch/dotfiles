@@ -60,6 +60,12 @@ ln -f $SCRIPT_PARENT_DIRECTORY/nvim/lua/settings.lua ~/.config/nvim/lua/
 ln -f $SCRIPT_PARENT_DIRECTORY/vifm/vifmrc ~/.config/vifm/
 ln -f $SCRIPT_PARENT_DIRECTORY/vifm/colors/palenight.vifm ~/.config/vifm/colors/
 
+# MY CUSTUM SCRIPTS
+ln -f $SCRIPT_PARENT_DIRECTORY/scripts/StartupScript.sh ~/.config/scripts/
+ln -f $SCRIPT_PARENT_DIRECTORY/scripts/ShutDownScript.sh ~/.config/scripts/
+ln -f $SCRIPT_PARENT_DIRECTORY/scripts/SysUpdateChecker.sh ~/.config/scripts/
+ln -f $SCRIPT_PARENT_DIRECTORY/scripts/ZKpushpull.sh ~/.config/scripts/
+
 
 # --------------------------------------------------
 # CLEAN UP
