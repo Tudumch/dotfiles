@@ -2,21 +2,6 @@ local cmd = vim.cmd             -- execute Vim commands
 local exec = vim.api.nvim_exec  -- execute Vimscript
 local g = vim.g                 -- global variables
 local opt = vim.opt             -- global/buffer/windows-scoped options
--- Направление перевода с русского на английский
-g.translate_source = 'ru'
-g.translate_target = 'en'
--- Компактный вид у тагбара и Отк. сортировка по имени у тагбара
-g.tagbar_compact = 1
-g.tagbar_sort = 0
-
--- Конфиг ale + eslint
-g.ale_fixers = { javascript= { 'eslint' } }
-g.ale_sign_error = '❌'
-g.ale_sign_warning = '⚠️'
-g.ale_fix_on_save = 1
--- Запуск линтера, только при сохранении
-g.ale_lint_on_text_changed = 'never'
-g.ale_lint_on_insert_leave = 0
 
 -----------------------------------------------------------
 -- Главные
@@ -30,6 +15,11 @@ opt.so=999                          -- Курсор всегда в центре
 opt.undofile = true                 -- Возможность отката назад
 opt.splitright = true               -- vertical split вправо
 opt.splitbelow = true               -- horizontal split вниз
+
+-- Настройки встроенного в nvim файлового менеджера
+g.netrw_banner = 0        -- убрать верхнюю инфо-панель
+g.netrw_liststyle = 3     -- древовидное отображение иерархии файлов
+g.netrw_browse_split = 3  -- открывать файлы в новой вкладке
 -----------------------------------------------------------
 -- Цветовая схема
 -----------------------------------------------------------
@@ -74,6 +64,22 @@ augroup end
 -----------------------------------------------------------
 -- Установки для плагинов
 -----------------------------------------------------------
+-- Компактный вид у тагбара и Отк. сортировка по имени у тагбара
+g.tagbar_compact = 1
+g.tagbar_sort = 0
+-- Конфиг ale + eslint
+g.ale_fixers = { javascript= { 'eslint' } }
+g.ale_sign_error = '❌'
+g.ale_sign_warning = '⚠️'
+g.ale_fix_on_save = 1
+-- Запуск линтера, только при сохранении
+g.ale_lint_on_text_changed = 'never'
+g.ale_lint_on_insert_leave = 0
+
+-- Изменяем дефолтные кнопки у плагина Comment
+local Comment = require 'Comment'
+Comment.setup { opleader = {line = '<leader>gc'} }
+
 -- LSP settings
 local lsp_installer = require("nvim-lsp-installer")
 lsp_installer.on_server_ready(function(server)

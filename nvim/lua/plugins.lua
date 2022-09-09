@@ -44,6 +44,7 @@ return require('packer').startup(function()
     use { 'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} },
     config = function() require'telescope'.setup {} end, }
+    use 'nvim-telescope/telescope-fzf-native.nvim'
 
     -- Прыжки на буквы по нажатию CTRL+h
     use { 'phaazon/hop.nvim',

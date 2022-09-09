@@ -1,6 +1,11 @@
 local map = vim.api.nvim_set_keymap
 local default_opts = {noremap = true, silent = true}
 
+vim.g.mapleader = ","
+
+-- [ , + r ] - Заменить слово под курсором во всём файле
+map('n', '<leader>r', ':%s/<C-r><C-w>/', default_opts)
+map('v', '<leader>r', '"hy:%s/<C-r>h//gc<left><left><left>', default_opts)
 -- Системный буфер обмена shift - Y (не работает?)
 map('v', 'S-Y', '"*y', {})
 map('n', 'S-P', '"*p', {})
@@ -17,14 +22,16 @@ map('i', '<C-s>', '<esc>:Autoformat<CR>:w<CR>', default_opts)
 -- Переключение вкладок с помощью TAB или shift-tab (akinsho/bufferline.nvim)
 map('n', '<Tab>', ':BufferLineCycleNext<CR>', default_opts)
 map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
-map('n', '<C-Tab>', ':bdelete<CR>', default_opts) -- Почему-то не работает :(
-map('n', '<C-S-Tab>', ':bdelete!<CR>', default_opts)
+-- Закрытие всех вкладок, кроме активной
+map('n', '<leader>bd', ':%bd|e#|bd#<CR>', default_opts)
 -- Пролистнуть на страницу вниз / вверх (как в браузерах)
 map('n', '<Space>', '<PageDown> zz', default_opts)
 map('n', '<C-Space>', '<PageUp> zz', default_opts)
 -- telescope
-map('n', '<C-a>', [[ <cmd>lua require('telescope.builtin').find_files()<cr> ]], default_opts)
-map('n', '<C-p>', [[ <cmd>lua require('telescope.builtin').buffers()<cr> ]], default_opts)
+map('n', '<leader>ff', ':Telescope find_files<cr>', default_opts)
+map('n', '<leader>fg', ':Telescope live_grep<cr>', default_opts)
+map('n', '<leader>fb', '<cmd>Telescope buffers<CR>', default_opts)
+map('n', '<leader>fr', ':Telescope grep_string<cr>', default_opts)
 -- hop
 map('n', '<C-h>', ':HopChar1<CR>', default_opts)
 

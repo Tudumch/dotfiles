@@ -35,6 +35,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \https://raw.githubusercontent.
 sudo pacman -S neovim --noconfirm
 sudo pacman -S xclip --noconfirm # for work with system clipboard
 sudo pacman -S ctags --noconfirm # for nvim tagbar-plugin
+sudo pacman -S ripgrep --noconfirm # for search in Telescope-plugin
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim  # nvim plugin-manager Packer
 
 # VIFM (filemanager)
