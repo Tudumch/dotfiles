@@ -32,20 +32,24 @@ return require('packer').startup(function()
     opt = true,
     cmd = {'NvimTreeToggle'}, 
     config = function() require'nvim-tree'.setup {} end, }
+    -- Иконки для файлового менеджера
     use { 'kyazdani42/nvim-web-devicons',
     opt = true,
-    cmd = {'NvimTreeToggle'} }
-
+    cmd = {'NvimTreeOpen'} }
 
     -- Навигация внутри файла по классам и функциям
     use 'majutsushi/tagbar'
-    -- Замена fzf и ack
+    
+    -- Поиск по файлам
     use { 'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} },
     config = function() require'telescope'.setup {} end, }
 
-    -- Прыжки между сочетаниями двух букв по нажатию на s
-    use 'justinmk/vim-sneak'
+    -- Прыжки на буквы по нажатию CTRL+h
+    use { 'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function() require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end }
 
     -----------------------------------------------------------
     -- LSP и автодополнялка

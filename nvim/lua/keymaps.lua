@@ -1,7 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local default_opts = {noremap = true, silent = true}
 
--- Системный буфер обмена shift - Y
+-- Системный буфер обмена shift - Y (не работает?)
 map('v', 'S-Y', '"*y', {})
 map('n', 'S-P', '"*p', {})
 -- Типа 'Нажимает' на ESC при быстром нажатии jj, чтобы не тянутся
@@ -17,14 +17,16 @@ map('i', '<C-s>', '<esc>:Autoformat<CR>:w<CR>', default_opts)
 -- Переключение вкладок с помощью TAB или shift-tab (akinsho/bufferline.nvim)
 map('n', '<Tab>', ':BufferLineCycleNext<CR>', default_opts)
 map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
-map('n', '<C-Tab>', 'bdelete<CR>', default_opts) -- Почему-то не работает :(
-map('n', '<C-S-Tab>', 'bdelete!<CR>', default_opts)
+map('n', '<C-Tab>', ':bdelete<CR>', default_opts) -- Почему-то не работает :(
+map('n', '<C-S-Tab>', ':bdelete!<CR>', default_opts)
 -- Пролистнуть на страницу вниз / вверх (как в браузерах)
 map('n', '<Space>', '<PageDown> zz', default_opts)
 map('n', '<C-Space>', '<PageUp> zz', default_opts)
 -- telescope
 map('n', '<C-a>', [[ <cmd>lua require('telescope.builtin').find_files()<cr> ]], default_opts)
 map('n', '<C-p>', [[ <cmd>lua require('telescope.builtin').buffers()<cr> ]], default_opts)
+-- hop
+map('n', '<C-h>', ':HopChar1<CR>', default_opts)
 
 -----------------------------------------------------------
 -- Фн. клавиши по F1 .. F12
@@ -35,8 +37,10 @@ map('n', '<F1>', '', default_opts)
 map('n', '<S-F1>', '', default_opts)
 -- <F2> очищаем последний поиск с подсветкой
 map('n', '<F2>', ':nohl<CR>', default_opts)
--- <F3> дерево файлов.
+-- <F3> дерево файлов - закрыть.
 map('n', '<F3>', ':NvimTreeToggle<CR>:NvimTreeRefresh<CR>', default_opts)
+-- Shift+F3 дерево файлов - открыть.
+map('n', '<S-F3>', ':NvimTreeOpen<CR>', default_opts)
 -- <F4>  Показ дерева классов и функций, плагин majutsushi/tagbar
 map('n', '<F4>', ':TagbarToggle<CR>', default_opts)
 -- <F5> 
