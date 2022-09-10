@@ -16,20 +16,19 @@ force_color_promt=yes
 # ----------------------------------------------------------------------
 
 # Path-related aliases
-
-alias ZKpull='~/linux_configs/arch/ZKpushpull.sh pull'
-alias ZKpush='~/linux_configs/arch/ZKpushpull.sh push'
-
-alias update='~/linux_configs/arch/SysUpdateChecker.sh'
+alias ZKpull='~/.config/scripts/ZKpushpull.sh pull'
+alias ZKpush='~/.config/scripts/ZKpushpull.sh push'
+alias update='~/.config/scripts/SysUpdateChecker.sh'
 
 # Universal aliases
 alias shutdown='shutdown now'
 alias v='nvim'
 alias f='vifm'
 alias bluetooth='blueman-manager'
+alias chbash='v ~/.bashrc; source ~/.bashrc'
 
-alias pull='~/linux_configs/arch/StartupScript.sh'
-alias push='~/linux_configs/arch/ShutDownScript.sh'
+alias pull='~/.config/scripts/StartupScript.sh'
+alias push='~/.config/scripts/ShutDownScript.sh'
 alias off='push; shutdown'
 alias reb='push; reboot'
 
@@ -41,7 +40,7 @@ alias pv='source ./venv/bin/activate' # активация venv для Python-п
 # Specific aliases
 alias steam='flatpak run com.valvesoftware.Steam'
 
-source ~/linux_configs/arch/SysUpdateChecker.sh
+source ~/.config/scripts/SysUpdateChecker.sh
 source ~/.config/i3/screenlocker_var
 source /etc/profile.d/vte.sh
 

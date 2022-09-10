@@ -13,4 +13,4 @@ git pull origin main
 ~/dotfiles/synchronize.sh
 
 # Синхронизируем хранилище инфы обсидиана
-~/linux_configs/arch/ZKpushpull.sh pull		
+~/.config/scripts/ZKpushpull.sh pull		

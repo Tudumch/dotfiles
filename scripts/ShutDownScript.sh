@@ -13,4 +13,4 @@ git commit -m "AUTOSYNC (means I forgot to commit some changes manualy before tu
 git push
 
 # Синхронизируем хранилище инфы обсидиана
-~/linux_configs/arch/ZKpushpull.sh push		
+~/.config/scripts/ZKpushpull.sh push		

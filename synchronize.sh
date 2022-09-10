@@ -33,6 +33,7 @@ ln -f $SCRIPT_PARENT_DIRECTORY/i3/config ~/.config/i3/
 ln -f $SCRIPT_PARENT_DIRECTORY/i3/i3lockscript.sh ~/.config/i3/
 ln -f $SCRIPT_PARENT_DIRECTORY/i3/screenlocker_switcher.sh ~/.config/i3/
 ln -f $SCRIPT_PARENT_DIRECTORY/i3/overlay.png ~/.config/i3/
+lockon # запускает алиас из bashrc чтобы создать переменную для i3lockscript.sh
 
 ln -f $SCRIPT_PARENT_DIRECTORY/i3status/config ~/.config/i3status/
 
