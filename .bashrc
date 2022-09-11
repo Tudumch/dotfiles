@@ -41,6 +41,6 @@ alias pv='source ./venv/bin/activate' # активация venv для Python-п
 alias steam='flatpak run com.valvesoftware.Steam'
 
 source ~/.config/scripts/SysUpdateChecker.sh
-source ~/.config/i3/screenlocker_var
+source ~/.screenlocker_var
 source /etc/profile.d/vte.sh
 

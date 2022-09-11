@@ -8,9 +8,7 @@
 ~/.config/i3/screenlocker_switcher.sh
 
 # Синхронизируем dotfiles-репозиторий чтобы синхронизировались конфиги
-cd ~/dotfiles
-git pull origin main
-~/dotfiles/synchronize.sh
+~/.config/scripts/pushpull_dotfiles.sh pull		
 
 # Синхронизируем хранилище инфы обсидиана
 ~/.config/scripts/ZKpushpull.sh pull		

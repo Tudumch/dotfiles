@@ -3,9 +3,14 @@ local default_opts = {noremap = true, silent = true}
 
 vim.g.mapleader = ","
 
+-- Найти слово под курсором
+map('n', '<leader>.', '/<C-r><C-w>/', default_opts)
 -- [ , + r ] - Заменить слово под курсором во всём файле
 map('n', '<leader>r', ':%s/<C-r><C-w>/', default_opts)
-map('v', '<leader>r', '"hy:%s/<C-r>h//gc<left><left><left>', default_opts)
+map('v', '<leader>r', '"hy:%s/<C-r>h/', default_opts)
+-- Добавление строк без входа в insert-mode
+map('n', '<leader>o', 'o<Esc>', default_opts)
+map('n', '<leader>O', 'O<Esc>', default_opts)
 -- Системный буфер обмена shift - Y (не работает?)
 map('v', 'S-Y', '"*y', {})
 map('n', 'S-P', '"*p', {})

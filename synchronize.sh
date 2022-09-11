@@ -66,6 +66,7 @@ ln -f $SCRIPT_PARENT_DIRECTORY/scripts/StartupScript.sh ~/.config/scripts/
 ln -f $SCRIPT_PARENT_DIRECTORY/scripts/ShutDownScript.sh ~/.config/scripts/
 ln -f $SCRIPT_PARENT_DIRECTORY/scripts/SysUpdateChecker.sh ~/.config/scripts/
 ln -f $SCRIPT_PARENT_DIRECTORY/scripts/ZKpushpull.sh ~/.config/scripts/
+ln -f $SCRIPT_PARENT_DIRECTORY/scripts/pushpull_dotfiles.sh ~/.config/scripts/
 
 
 # --------------------------------------------------

@@ -6,11 +6,8 @@
 # Включаем автоматическую блокировку экрана, если вдруг она была выключена
 ~/.config/i3/screenlocker_switcher.sh
 
-# Комитим и пушим изменения в dot-файлах, если вдруг я забыл закомитить их вручную
-cd ~/dotfiles
-git add .
-git commit -m "AUTOSYNC (means I forgot to commit some changes manualy before turn off my PC)"
-git push
+# Комитим и пушим изменения в dot-файлах, если вдруг я забыл сделать это вручную
+~/.config/scripts/pushpull_dotfiles.sh push		
 
 # Синхронизируем хранилище инфы обсидиана
 ~/.config/scripts/ZKpushpull.sh push		
