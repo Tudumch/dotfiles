@@ -4,6 +4,8 @@
 require('plugins')
 require('settings') 
 require('keymaps')
+require('plugin_configs/cmp')
+require('plugin_configs/lsp')
 
 -----------------------------------------------------------
 -- Проверяем установлен ли Packer. Если нет - устанавливаем

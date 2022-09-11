@@ -25,11 +25,13 @@ g.netrw_keepdir=0         -- автоизменение рабочей дире�
 -- по умолчанию скрывать скрытые файлы. Показать файлы: 'gh'
 ghregex = '\\(^\\|\\s\\s\\)\\zs\\.\\S\\+'
 g.netrw_list_hide=ghregex
+
 -----------------------------------------------------------
 -- Цветовая схема
 -----------------------------------------------------------
 opt.termguicolors = true      --  24-bit RGB colors
 cmd'colorscheme onedark'
+
 -----------------------------------------------------------
 -- Табы и отступы
 -----------------------------------------------------------
@@ -51,6 +53,7 @@ autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml,htmljinja setlocal 
 ]]
 -- С этой строкой отлично форматирует html файл, который содержит jinja2
 cmd[[ autocmd BufNewFile,BufRead *.html set filetype=htmldjango ]]
+
 -----------------------------------------------------------
 -- Полезные фишки
 -----------------------------------------------------------
@@ -80,60 +83,4 @@ g.ale_fix_on_save = 1
 -- Запуск линтера, только при сохранении
 g.ale_lint_on_text_changed = 'never'
 g.ale_lint_on_insert_leave = 0
--- Изменяем дефолтные кнопки у плагина Comment
-local Comment = require 'Comment'
-Comment.setup { opleader = {line = '<leader>gc'} }
 
--- LSP settings
-local lsp_installer = require("nvim-lsp-installer")
-lsp_installer.on_server_ready(function(server)
-    local opts = {}
-    if server.name == "sumneko_lua" then
-        -- only apply these settings for the "sumneko_lua" server
-        opts.settings = {
-            Lua = {
-                diagnostics = {
-                    -- Get the language server to recognize the 'vim', 'use' global
-                    globals = {'vim', 'use'},
-                },
-                workspace = {
-                    -- Make the server aware of Neovim runtime files
-                    library = vim.api.nvim_get_runtime_file("", true),
-                },
-                -- Do not send telemetry data containing a randomized but unique identifier
-                telemetry = {
-                    enable = false,
-                },
-            },
-        }
-    end
-    server:setup(opts)
-end)
-
-
--- nvim-cmp supports additional completion capabilities
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
-vim.o.completeopt = 'menuone,noselect'
--- luasnip setup
-local luasnip = require 'luasnip'
--- nvim-cmp setup
-local cmp = require 'cmp'
-cmp.setup {
-    snippet = {
-        expand = function(args)
-            luasnip.lsp_expand(args.body)
-        end,
-    },
-    sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-        { name = 'path' },
-        { name = 'buffer', option = {
-            get_bufnrs = function()
-                return vim.api.nvim_list_bufs()
-            end
-        },
-    },
-},
-}

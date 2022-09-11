@@ -26,6 +26,8 @@ echo
 echo If you agree - press any key, if no - press CTRL+C
 read
 
+sudo pacman -Sy
+
 sudo pacman -S ttf-font-awesome --noconfirm # font for icons in i3-statusbar
  
 # vim plugin-manager VIM-PLUG
@@ -36,6 +38,7 @@ sudo pacman -S neovim --noconfirm
 sudo pacman -S xclip --noconfirm # for work with system clipboard
 sudo pacman -S ctags --noconfirm # for nvim tagbar-plugin
 sudo pacman -S ripgrep --noconfirm # for search in Telescope-plugin
+sudo pacman -S pyright --noconfirm # for python autocomplition
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim  # nvim plugin-manager Packer
 
 # VIFM (filemanager)

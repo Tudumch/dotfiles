@@ -56,13 +56,13 @@ return require('packer').startup(function()
     -----------------------------------------------------------
     -- LSP и автодополнялка
     -----------------------------------------------------------
-
     -- Highlight, edit, and navigate code using a fast incremental parsing library
     -- Collection of configurations for built-in LSP client
+    use 'hrsh7th/nvim-cmp'
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
     -- Автодополнялка
-    use 'hrsh7th/nvim-cmp'
+    -- use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'saadparwaiz1/cmp_luasnip'
