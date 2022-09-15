@@ -23,7 +23,7 @@ alias update='~/.config/scripts/SysUpdateChecker.sh'
 # Universal aliases
 alias shutdown='shutdown now'
 alias v='nvim'
-alias f='vifm'
+alias f='~/.config/vifm/vifmrun'
 alias bluetooth='blueman-manager'
 alias chbash='v ~/.bashrc; source ~/.bashrc'
 
@@ -36,6 +36,7 @@ alias lockoff='~/.config/i3/screenlocker_switcher.sh off'
 alias lockon='~/.config/i3/screenlocker_switcher.sh'
 
 alias pv='source ./venv/bin/activate' # активация venv для Python-проекта
+alias pt='python3 -m unittest discover -v' # запуск всех тестов в проекте 
 
 # Specific aliases
 alias steam='flatpak run com.valvesoftware.Steam'

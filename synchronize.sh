@@ -61,6 +61,8 @@ ln -f $SCRIPT_PARENT_DIRECTORY/nvim/lua/plugin_configs/lsp.lua ~/.config/nvim/lu
 
 # VIFM (filemanager)
 ln -f $SCRIPT_PARENT_DIRECTORY/vifm/vifmrc ~/.config/vifm/
+ln -f $SCRIPT_PARENT_DIRECTORY/vifm/vifmrun ~/.config/vifm/
+ln -f $SCRIPT_PARENT_DIRECTORY/vifm/vifmimg ~/.config/vifm/
 ln -f $SCRIPT_PARENT_DIRECTORY/vifm/colors/palenight.vifm ~/.config/vifm/colors/
 
 # MY CUSTUM SCRIPTS

@@ -11,9 +11,9 @@ map('v', '<leader>r', '"hy:%s/<C-r>h/', default_opts)
 -- Добавление строк без входа в insert-mode
 map('n', '<leader>o', 'o<Esc>', default_opts)
 map('n', '<leader>O', 'O<Esc>', default_opts)
--- Системный буфер обмена shift - Y (не работает?)
-map('v', 'S-Y', '"*y', {})
-map('n', 'S-P', '"*p', {})
+-- Копирование и вставка из системного буфера обмена 
+map('v', '<leader>y', '"*y', default_opts)
+map('n', '<leader>p', '"*p', default_opts)
 -- Типа 'Нажимает' на ESC при быстром нажатии jj, чтобы не тянутся
 map('i', 'jk', '<Esc>', {noremap = true})
 -- Стрелочки откл. Использовать hjkl
@@ -51,8 +51,9 @@ map('n', '<S-F1>', '', default_opts)
 map('n', '<F2>', ':nohl<CR>', default_opts)
 -- <F3> дерево файлов дефолтного вимовского NetRwTree.
 map('n', '<F3>', ':Vex<CR> 30<C-w><<>gh', default_opts)
--- Shift+F3 
-map('n', '<S-F3>', '', default_opts)
+-- Shift+F3 или Alt+w - закрыть текущий буфер
+map('n', '<F15>', ':bd<CR>:q<CR>', default_opts)
+map('n', '<A-w>', ':bd<CR>:q<CR>', default_opts)
 -- <F4>  Показ дерева классов и функций, плагин majutsushi/tagbar
 map('n', '<F4>', ':TagbarToggle<CR>', default_opts)
 -- <F5> 
@@ -61,6 +62,8 @@ map('n', '<F5>', '', default_opts)
 map('n', '<F6>', '', default_opts)
 -- <F7> Запуск питонячего кода по одной кнопке 
 map('n', '<F7>', ':!python3 %<CR>', default_opts)
+-- Shift+F7 Запуск питонячих тестов
+map('n', '<F19>', ':!python3 -m unittest discover -v<CR>', default_opts)
 -- <F8>  
 map('n', '<F8>', '', default_opts)
 -- <F9> Поиск слова под курсором

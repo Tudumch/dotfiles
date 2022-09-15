@@ -43,6 +43,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nv
 
 # VIFM (filemanager)
 sudo pacman -S vifm --noconfirm
+sudo pacman -S ueberzug --noconfirm # for image-priviews
+sudo pacman -S ffmpegthumbnailer --noconfirm # for video-priviews
 
 # Image Viewer Geeqie
 sudo pacman -S geeqie --noconfirm
