@@ -36,7 +36,8 @@ alias lockoff='~/.config/i3/screenlocker_switcher.sh off'
 alias lockon='~/.config/i3/screenlocker_switcher.sh'
 
 alias pv='source ./venv/bin/activate' # активация venv для Python-проекта
-alias pt='python3 -m unittest discover -v' # запуск всех тестов в проекте 
+alias pt='pv; python3 -m unittest discover' # запуск всех тестов в проекте 
+alias pr='pv; pt; python3 main.py' # запуск main-модуля Python-проекта
 
 # Specific aliases
 alias steam='flatpak run com.valvesoftware.Steam'

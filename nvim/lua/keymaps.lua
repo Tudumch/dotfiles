@@ -9,8 +9,8 @@ map('n', '<leader>.', '/<C-r><C-w>/', default_opts)
 map('n', '<leader>r', ':%s/<C-r><C-w>/', default_opts)
 map('v', '<leader>r', '"hy:%s/<C-r>h/', default_opts)
 -- Добавление строк без входа в insert-mode
-map('n', '<leader>o', 'o<Esc>', default_opts)
-map('n', '<leader>O', 'O<Esc>', default_opts)
+map('n', '<A-o>', 'o<Esc>', default_opts)
+map('n', '<A-O>', 'O<Esc>', default_opts)
 -- Копирование и вставка из системного буфера обмена 
 map('v', '<leader>y', '"*y', default_opts)
 map('n', '<leader>p', '"*p', default_opts)
@@ -49,11 +49,13 @@ map('n', '<F1>', '', default_opts)
 map('n', '<S-F1>', '', default_opts)
 -- <F2> очищаем последний поиск с подсветкой
 map('n', '<F2>', ':nohl<CR>', default_opts)
--- <F3> дерево файлов дефолтного вимовского NetRwTree.
-map('n', '<F3>', ':Vex<CR> 30<C-w><<>gh', default_opts)
--- Shift+F3 или Alt+w - закрыть текущий буфер
-map('n', '<F15>', ':bd<CR>:q<CR>', default_opts)
-map('n', '<A-w>', ':bd<CR>:q<CR>', default_opts)
+
+-- <F3> дерево файлов
+-- map('n', '<F3>', ':Vex<CR> 30<C-w><<>gh', default_opts)
+-- map('n', '<F15>', ':bd<CR>:q<CR>', default_opts)
+map('n', '<A-w>', ':bd<CR>', default_opts)
+map('n', '<F3>', ':NERDTreeToggle<CR>', default_opts)
+
 -- <F4>  Показ дерева классов и функций, плагин majutsushi/tagbar
 map('n', '<F4>', ':TagbarToggle<CR>', default_opts)
 -- <F5> 

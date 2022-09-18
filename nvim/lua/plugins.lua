@@ -27,15 +27,16 @@ return require('packer').startup(function()
     -- НАВИГАЦИЯ
     -----------------------------------------------------------
     -- Файловый менеджер
-    use { 'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-    opt = true,
-    cmd = {'NvimTreeToggle'}, 
-    config = function() require'nvim-tree'.setup {} end, }
-    -- Иконки для файлового менеджера
-    use { 'kyazdani42/nvim-web-devicons',
-    opt = true,
-    cmd = {'NvimTreeOpen'} }
+    use { "preservim/nerdtree" }
+    -- use { 'kyazdani42/nvim-tree.lua',
+    -- requires = 'kyazdani42/nvim-web-devicons',
+    -- opt = true,
+    -- cmd = {'NvimTreeToggle'}, 
+    -- config = function() require'nvim-tree'.setup {} end, }
+    -- -- Иконки для файлового менеджера
+    -- use { 'kyazdani42/nvim-web-devicons',
+    -- opt = true,
+    -- cmd = {'NvimTreeOpen'} }
 
     -- Навигация внутри файла по классам и функциям
     use 'majutsushi/tagbar'
@@ -58,11 +59,10 @@ return require('packer').startup(function()
     -----------------------------------------------------------
     -- Highlight, edit, and navigate code using a fast incremental parsing library
     -- Collection of configurations for built-in LSP client
-    use 'hrsh7th/nvim-cmp'
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
     -- Автодополнялка
-    -- use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'saadparwaiz1/cmp_luasnip'
