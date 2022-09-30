@@ -12,3 +12,4 @@
 
 # Синхронизируем хранилище инфы обсидиана
 ~/.config/scripts/ZKpushpull.sh pull		
+~/.config/scripts/ZKpushpull.sh push		

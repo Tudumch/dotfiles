@@ -11,11 +11,24 @@
 # ПЕРЕМЕННЫЕ
 currentFLDR=`pwd`                         # Получаем текущую дерикторию
 machineName=`uname -n`
-zettelkastenFLDR=~/zettelkasten
 seporator="--------------------------------------"
 
 # ТЕЛО
-cd $zettelkastenFLDR
+
+# Проверяет существует ли файл с переменной ZKpath. Если нет - создаёт его.
+if [[ -e ~/.ZKpath_var ]]
+then
+    source ~/.ZKpath_var
+else
+    touch ~/.ZKpath_var
+    echo Enter full path to Zettelkasten folder:
+    read USER_INPUT 
+    echo -e "ZKpath=$USER_INPUT" > ~/.ZKpath_var
+    source ~/.ZKpath_var
+fi
+
+# Тело скрипта
+cd $ZKpath
 
 if [[ $1 == pull ]]
 then
