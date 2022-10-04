@@ -29,6 +29,13 @@ then
     then
 	echo Updating...
 	sudo pacman -Syu --noconfirm
+    if [ $? -ne 0 ]
+    then
+      echo "An error has occured in update process!"
+      read
+      exit 1
+    fi
+
 	echo -e "LAST_UPDATE=`date +%m`\n" > ~/.SysUpdateCheck_VARs
 	echo Updates installed!
 	sleep 2

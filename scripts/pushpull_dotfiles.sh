@@ -32,6 +32,13 @@ then
     git add .
     git commit -am "AUTOSYNC (means I forgot to commit some changes manualy before turn off my PC)"
     git push
+
+    if [ $? -ne 0 ]
+    then
+      echo "An error occurred when sending to a remote repository!"
+      sleep 2
+    fi
+
     echo $seporator
 fi
 

@@ -39,6 +39,9 @@ map('n', '<leader>fb', '<cmd>Telescope buffers<CR>', default_opts)
 map('n', '<leader>fr', ':Telescope grep_string<cr>', default_opts)
 -- hop
 map('n', '<C-h>', ':HopChar1<CR>', default_opts)
+-- CamelCaseMotion
+vim.g.camelcasemotion_key="<leader>"
+
 
 -----------------------------------------------------------
 -- Фн. клавиши по F1 .. F12

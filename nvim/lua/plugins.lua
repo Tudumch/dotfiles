@@ -53,6 +53,10 @@ return require('packer').startup(function()
     config = function() require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end }
 
+    -- Распознавание отдельных слов для стиля написания CamelCase
+    use { 'bkad/CamelCaseMotion' }
+    -- Улучшенное распознавание блоков кода для разных языков
+    use { 'michaeljsmith/vim-indent-object' }
 
     -----------------------------------------------------------
     -- LSP и автодополнялка

@@ -45,8 +45,15 @@ then
     git add .
     git commit -am "Arch: autosync."
     git push
-    echo $seporator
-fi
+
+    if [ $? -ne 0 ]
+    then
+      echo "An error occurred when sending to a remote repository!"
+      sleep 2
+    fi
+
+        echo $seporator
+    fi
 
 cd $currentFLDR
 
