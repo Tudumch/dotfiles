@@ -40,9 +40,9 @@ ln -f $SCRIPT_PARENT_DIRECTORY/i3status/config ~/.config/i3status/
 # XFCE4-TERMINAL
 ln -f $SCRIPT_PARENT_DIRECTORY/xfce4/terminal/terminalrc ~/.config/xfce4/terminal
 
-# Midnight Commander
-ln -f $SCRIPT_PARENT_DIRECTORY/mc/mc.ext ~/.config/mc/
-ln -f $SCRIPT_PARENT_DIRECTORY/mc/mc.keymap ~/.config/mc/
+# vlc-player
+ln -f $SCRIPT_PARENT_DIRECTORY/vlc/vlc-qt-interface.conf ~/.config/vlc/
+ln -f $SCRIPT_PARENT_DIRECTORY/vlc/vlcrc ~/.config/vlc/
 
 # Image Viewer Geeqie
 ln -f $SCRIPT_PARENT_DIRECTORY/geeqie/default_window_layout.xml ~/.config/geeqie/
