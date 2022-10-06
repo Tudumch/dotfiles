@@ -199,6 +199,7 @@ exec --no-startup-id obsidian &
 
 # Run some scripts until system starting
 exec --no-startup-id ~/.config/scripts/StartupScript.sh
+exec --no-startup-id yandex-disk start
 
 # Assigning apps to workspaces
 assign [class="firefox"]$ws3
