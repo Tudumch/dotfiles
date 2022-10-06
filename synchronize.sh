@@ -58,6 +58,7 @@ ln -f $SCRIPT_PARENT_DIRECTORY/nvim/lua/plugins.lua ~/.config/nvim/lua/
 ln -f $SCRIPT_PARENT_DIRECTORY/nvim/lua/settings.lua ~/.config/nvim/lua/
 ln -f $SCRIPT_PARENT_DIRECTORY/nvim/lua/plugin_configs/cmp.lua ~/.config/nvim/lua/plugin_configs/
 ln -f $SCRIPT_PARENT_DIRECTORY/nvim/lua/plugin_configs/lsp.lua ~/.config/nvim/lua/plugin_configs/
+ln -f $SCRIPT_PARENT_DIRECTORY/nvim/lua/plugin_configs/dap.lua ~/.config/nvim/lua/plugin_configs/
 
 # VIFM (filemanager)
 ln -f $SCRIPT_PARENT_DIRECTORY/vifm/vifmrc ~/.config/vifm/

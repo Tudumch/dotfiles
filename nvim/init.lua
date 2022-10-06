@@ -6,6 +6,7 @@ require('settings')
 require('keymaps')
 require('plugin_configs/cmp')
 require('plugin_configs/lsp')
+require('plugin_configs/dap')
 
 -----------------------------------------------------------
 -- Проверяем установлен ли Packer. Если нет - устанавливаем
