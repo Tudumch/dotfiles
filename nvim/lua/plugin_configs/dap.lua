@@ -4,7 +4,7 @@ local default_opts = {noremap = true, silent = true}
 -----------------------------------------------------------
 -- dap settings
 -----------------------------------------------------------
-require('telescope').load_extension('dap')
+-- require('telescope').load_extension('dap')
 local dap = require('dap')
 
 dap.adapters.python = {

@@ -26,6 +26,12 @@ then
 
     # XSESSION FILE
     ln -f $SCRIPT_PARENT_DIRECTORY/.xsession ~/
+    if [ $? -ne 0 ]
+    then
+      echo "WARNING: .xsession file hasn't been symlinked!"
+      echo "Press any key to continue"
+      read
+    fi
 fi
 
 # i3wm

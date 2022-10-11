@@ -28,15 +28,6 @@ return require('packer').startup(function()
     -----------------------------------------------------------
     -- Файловый менеджер
     use { "preservim/nerdtree" }
-    -- use { 'kyazdani42/nvim-tree.lua',
-    -- requires = 'kyazdani42/nvim-web-devicons',
-    -- opt = true,
-    -- cmd = {'NvimTreeToggle'}, 
-    -- config = function() require'nvim-tree'.setup {} end, }
-    -- -- Иконки для файлового менеджера
-    -- use { 'kyazdani42/nvim-web-devicons',
-    -- opt = true,
-    -- cmd = {'NvimTreeOpen'} }
 
     -- Навигация внутри файла по классам и функциям
     use 'majutsushi/tagbar'
@@ -75,6 +66,9 @@ return require('packer').startup(function()
     -- Snippets plugin
     use 'L3MON4D3/LuaSnip'
 
+    -- Дебаггер
+    use 'mfussenegger/nvim-dap'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
     -----------------------------------------------------------
     -- PYTHON

@@ -41,7 +41,7 @@ sudo pacman -S ripgrep --noconfirm # for search in Telescope-plugin
 sudo pacman -S pyright --noconfirm # for python autocomplition
 python -m venv path/to/virtualenvs/debugpy # python debug
 path/to/virtualenvs/debugpy/bin/python -m pip3 install debugpy # python debug
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim  # nvim plugin-manager Packer
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim  # nvim plugin-manager Packer
 
 # VIFM (filemanager)
 sudo pacman -S vifm --noconfirm
