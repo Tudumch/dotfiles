@@ -14,5 +14,3 @@
 ~/.config/scripts/ZKpushpull.sh pull		
 ~/.config/scripts/ZKpushpull.sh push		
 
-# Синхронизируем GoogleDrive
-~/.config/scripts/grive_sync.sh
