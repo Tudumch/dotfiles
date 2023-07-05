@@ -196,8 +196,6 @@ bar {
 exec --no-startup-id xfce4-terminal 
 exec --no-startup-id firefox &
 exec --no-startup-id obsidian &
-exec --no-startup-id yandex-disk start
-exec --no-startup-id megasync
 
 # Run some scripts until system starting
 exec --no-startup-id ~/.config/scripts/StartupScript.sh
