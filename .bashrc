@@ -41,6 +41,7 @@ alias pr='pv; pt; python3 main.py' # запуск main-модуля Python-пр�
 
 # Specific aliases
 alias steam='flatpak run com.valvesoftware.Steam'
+alias yb='yandex-browser-stable'
 
 source ~/.config/scripts/SysUpdateChecker.sh
 source ~/.screenlocker_var
