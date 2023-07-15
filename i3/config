@@ -194,14 +194,12 @@ bar {
 
 # Autostart apps and commands
 exec --no-startup-id xfce4-terminal 
-exec --no-startup-id yandex-browser-stable &
 exec --no-startup-id obsidian &
 
 # Run some scripts until system starting
 exec --no-startup-id ~/.config/scripts/StartupScript.sh
 
 # Assigning apps to workspaces
-assign [class="yandex_browser"]$ws3
 assign [class="obsidian"]$ws2
 
 # Hotkeys: sound, brightness, screenlock
