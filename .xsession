@@ -1,5 +1,4 @@
 xautolock -time 10 -locker ~/.config/i3/i3lockscript.sh &
-numlockx &
 blueman-applet &
 pasystray & # sound-applet for pulseaudio
 setxkbmap -layout us,ru
