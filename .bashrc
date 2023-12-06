@@ -5,8 +5,17 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# ----------------------------------------------------------------------
+# Color text in terminal and show git branch name
+# ----------------------------------------------------------------------
+
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 alias ls='ls --color=auto'
-PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
+PS1='\[\033[1;36m\]\h\[\033[1;31m\]@\[\033[1;32m\]\u:\[\033[1;35m\]\w\[\033[1;31m\033[96m$(parse_git_branch)\033[00m\033[1;31m\]\$\[\033[0m\] '
+
 
 force_color_promt=yes
 
