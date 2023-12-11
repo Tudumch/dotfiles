@@ -8,7 +8,7 @@
 # Get path to this script:
 SCRIPT_ABSOLUTE_FILENAME=`readlink -e "$0"`
 # Get path to parent dir of this script:
-SCRIPT_PARENT_DIRECTORY=`dirname "$ABSOLUTE_FILENAME"`
+SCRIPT_PARENT_DIRECTORY=`dirname "$SCRIPT_ABSOLUTE_FILENAME"`
 
 # Copy all from script dir for make folder hierarchy:
 cp -r $SCRIPT_PARENT_DIRECTORY/* ~/.config/
