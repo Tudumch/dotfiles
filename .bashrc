@@ -41,8 +41,8 @@ alias push='~/.config/scripts/ShutDownScript.sh'
 alias off='push; shutdown'
 alias reb='push; reboot'
 
-alias lockoff='~/.config/i3/screenlocker_switcher.sh off'
-alias lockon='~/.config/i3/screenlocker_switcher.sh'
+alias lockoff='~/.config/i3lock/screenlocker_switcher.sh off'
+alias lockon='~/.config/i3lock/screenlocker_switcher.sh'
 
 alias pv='source ./venv/bin/activate' # активация venv для Python-проекта
 alias pt='pv; python3 -m unittest discover' # запуск всех тестов в проекте 
