@@ -16,9 +16,10 @@ parse_git_branch() {
 alias ls='ls --color=auto'
 PS1='\[\033[1;36m\]\h\[\033[1;31m\]@\[\033[1;32m\]\u:\[\033[1;35m\]\w\[\033[1;31m\033[96m$(parse_git_branch)\033[00m\033[1;31m\]\$\[\033[0m\] '
 
-
 force_color_promt=yes
 
+xrdb -merge ~/.config/rxvt/config # load config for rxvt-terminal
+clear
 
 # ----------------------------------------------------------------------
 # MY ALIASES
