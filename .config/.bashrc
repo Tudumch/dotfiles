@@ -56,5 +56,3 @@ source ~/.config/scripts/SysUpdateChecker.sh # checks whether the system needs u
 # source ~/.screenlocker_var
 # source /etc/profile.d/vte.sh
 
-clear
-

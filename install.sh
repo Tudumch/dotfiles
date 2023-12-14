@@ -10,25 +10,31 @@ SCRIPT_ABSOLUTE_FILENAME=`readlink -e "$0"`
 # Get path to parent dir of this script:
 SCRIPT_PARENT_DIRECTORY=`dirname "$SCRIPT_ABSOLUTE_FILENAME"`
 
+source $SCRIPT_PARENT_DIRECTORY/TDMCH_bashlib.sh # my bash-library
+
 # ----------------------------------------------------------------------------- 
 # Install
 # ----------------------------------------------------------------------------- 
 echo
 echo
-echo WARNING! This script will REPLACE your dotfiles in home directory!
+printColorText orange "WARNING! This script will REPLACE your dotfiles in home directory!"
 
 if [[ $1 == full ]]
 then
-    echo .bashrc and .xsession will be replaced too!
+    printColorText orange ".bashrc and .xsession will be replaced too!"
 fi
 
 echo
-echo If you agree - press ENTER, if no - press CTRL+C
+printColorText blue "If you agree - press ENTER, if no - press CTRL+C..."
 read
 
 sudo pacman -Sy
 
 sudo pacman -S ttf-font-awesome --noconfirm # font for icons in i3-statusbar
+
+# awesomeWM stuff
+sudo pacman -S xorg-backlight i3lock xautolock acpi scrot imagemagic --noconfirm
+sudo pacman -S rxvt-unicode --noconfirm
  
 # vim plugin-manager VIM-PLUG
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -39,9 +45,12 @@ sudo pacman -S xclip --noconfirm # for work with system clipboard
 sudo pacman -S ctags --noconfirm # for nvim tagbar-plugin
 sudo pacman -S ripgrep --noconfirm # for search in Telescope-plugin
 sudo pacman -S pyright --noconfirm # for python autocomplition
+yay -S cmp-nvim-lsp --noconfirm
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim  # nvim plugin-manager Packer
+
+# Python
 python -m venv ~/.python/path/to/virtualenvs/debugpy # python debug
 ~/.python/path/to/virtualenvs/debugpy/bin/python -m pip3 install debugpy # python debug
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim  # nvim plugin-manager Packer
 
 # VIFM (filemanager)
 sudo pacman -S vifm --noconfirm
@@ -61,3 +70,7 @@ then
 else
     $SCRIPT_PARENT_DIRECTORY/synchronize.sh
 fi
+
+echo
+printColorText green "Dotfiles installation and synchronization finished!"
+printColorText green "Reboot system to apply changes."
