@@ -2,8 +2,10 @@
 # ~/.bashrc
 #
 
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
 
 # ----------------------------------------------------------------------
 # Color text in terminal and show git branch name
@@ -18,8 +20,6 @@ PS1='\[\033[1;36m\]\h\[\033[1;31m\]@\[\033[1;32m\]\u:\[\033[1;35m\]\w\[\033[1;31
 
 force_color_promt=yes
 
-xrdb -merge ~/.config/rxvt/config # load config for rxvt-terminal
-clear
 
 # ----------------------------------------------------------------------
 # MY ALIASES
@@ -54,6 +54,6 @@ alias steam='flatpak run com.valvesoftware.Steam'
 alias yb='yandex-browser-stable'
 
 source ~/.config/scripts/SysUpdateChecker.sh
-source ~/.screenlocker_var
-source /etc/profile.d/vte.sh
+# source ~/.screenlocker_var
+# source /etc/profile.d/vte.sh
 
