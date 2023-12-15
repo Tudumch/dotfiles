@@ -43,7 +43,7 @@ fi
 # awesomeWM
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/awesome/rc.lua ~/.config/awesome/rc.lua
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/awesome/themes/zenfreeze/theme.lua ~/.config/awesome/themes/zenfreeze/theme.lua
-git clone https://github.com/streetturtle/awesome-wm-widgets.git ~/.config/awesome/ # repo with widgets
+git clone https://github.com/streetturtle/awesome-wm-widgets.git ~/.config/awesome/awesome-wm-widgets # repo with widgets
 
 
 # i3lock (screen locker)

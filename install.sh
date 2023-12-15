@@ -33,7 +33,7 @@ sudo pacman -Sy
 sudo pacman -S ttf-font-awesome --noconfirm # font for icons in i3-statusbar
 
 # awesomeWM stuff
-sudo pacman -S xorg-backlight i3lock xautolock acpi scrot imagemagic --noconfirm
+sudo pacman -S xorg-xbacklight i3lock xautolock acpi scrot imagemagick --noconfirm
 sudo pacman -S rxvt-unicode --noconfirm
  
 # vim plugin-manager VIM-PLUG
