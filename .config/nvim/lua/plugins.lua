@@ -108,8 +108,8 @@ return require('packer').startup(function()
     config = function() require('Comment').setup() end }
     -- Обрамляет строку в теги по ctrl- y + ,
     use 'mattn/emmet-vim'
-    -- Закрывает автоматом скобки
-    use 'cohama/lexima.vim'
+    -- Закрывает автоматом скобки (слишком тупой плагин, хз как настроить)
+    -- use 'cohama/lexima.vim'
     -- Линтер, работает для всех языков
     use 'dense-analysis/ale'
     -- Diff для удобного мерджа
