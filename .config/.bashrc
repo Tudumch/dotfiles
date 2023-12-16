@@ -50,6 +50,7 @@ alias pr='pv; pt; python3 main.py' # запуск main-модуля Python-пр�
 
 # Specific aliases
 alias steam='flatpak run com.valvesoftware.Steam'
+alias 1c='LANG=ru_RU.UTF-8 /opt/1cv8t/x86_64/8.3.24/1cv8t'
 
 alias update='~/.config/scripts/SysUpdateChecker.sh'
 source ~/.config/scripts/SysUpdateChecker.sh # checks whether the system needs update in current month
