@@ -42,6 +42,7 @@ alias reb='push; reboot'
 
 alias lockoff='~/.config/i3lock/screenlocker_switcher.sh off'
 alias lockon='~/.config/i3lock/screenlocker_switcher.sh'
+alias lock='~/.config/i3lock/i3lockscript.sh'
 
 # PYTHON
 alias pv='source ./venv/bin/activate' # активация venv для Python-проекта

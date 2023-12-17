@@ -307,8 +307,9 @@ globalkeys = gears.table.join(
               {description = "decrease the number of master clients", group = "layout"}),
     awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
               {description = "increase the number of columns", group = "layout"}),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
-              {description = "decrease the number of columns", group = "layout"}),
+    -- I use this hotkey combination for screen lock hotkey
+    -- awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
+    --           {description = "decrease the number of columns", group = "layout"}),
     awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
@@ -404,7 +405,7 @@ clientkeys = gears.table.join(
 
     -- Lock screen
     awful.key({modkey, "Control"}, "l", function () 
-        os.execute("~/.config/i3lock/i3lockscript.sh") end,
+        awful.spawn.with_shell("~/.config/i3lock/i3lockscript.sh") end,
               {description = "Activate lockscreen script", group = "screen"})
 )
 
