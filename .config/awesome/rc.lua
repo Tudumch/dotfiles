@@ -404,7 +404,8 @@ clientkeys = gears.table.join(
 
     -- Lock screen
     awful.key({modkey, "Control"}, "l", function () 
-        awful.util.spawn("~/.config/i3lock/i3lockscript.sh") end)
+        os.execute("~/.config/i3lock/i3lockscript.sh") end,
+              {description = "Activate lockscreen script", group = "screen"})
 )
 
 -- Bind all key numbers to tags.
@@ -606,6 +607,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 --------------------------------------------------
 -- awful.spawn.once("nm-applet") -- WiFi applet
 -- awful.spawn.with_shell("xrdb -merge ~/.config/rxvt/config") -- reload config for rxvt-terminal
+os.execute("~/.config/scripts/StartupScript.sh")
 os.execute("xrdb -merge ~/.config/rxvt/config")
 awful.spawn(terminal) 
 awful.spawn.single_instance("obsidian")
