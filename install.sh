@@ -31,6 +31,7 @@ read
 sudo pacman -Sy
 
 sudo pacman -S ttf-font-awesome --noconfirm # font for icons in i3-statusbar
+sudo pacman -S redshift --noconfirm # auto nightmode for screen
 
 # awesomeWM stuff
 sudo pacman -S xorg-xbacklight i3lock xautolock acpi scrot imagemagick --noconfirm

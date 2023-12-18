@@ -27,7 +27,7 @@ then
     source ~/.bashrc
 
     # XSESSION FILE
-    ln -f $SCRIPT_PARENT_DIRECTORY/.config/.xsession ~/
+    ln -f $SCRIPT_PARENT_DIRECTORY/.config/.xsession ~/.xsession
     if [ $? -ne 0 ]
     then
       printColorText red "ERROR: .xsession file hasn't been symlinked!"
@@ -45,6 +45,8 @@ ln -f $SCRIPT_PARENT_DIRECTORY/.config/awesome/rc.lua ~/.config/awesome/rc.lua
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/awesome/themes/zenfreeze/theme.lua ~/.config/awesome/themes/zenfreeze/theme.lua
 git clone https://github.com/streetturtle/awesome-wm-widgets.git ~/.config/awesome/awesome-wm-widgets # repo with widgets
 
+# redshift
+ln -f $SCRIPT_PARENT_DIRECTORY/.config/redshift/redshift.conf ~/.config/redshift/redshift.conf
 
 # i3lock (screen locker)
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/i3lock/i3lockscript.sh ~/.config/i3lock/
