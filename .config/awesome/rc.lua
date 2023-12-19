@@ -58,7 +58,7 @@ beautiful.init("~/.config/awesome/themes/zenfreeze/theme.lua")
 terminal = "urxvt"
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
-browser = "firefox"
+browser = "Yandex-browser"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -69,10 +69,10 @@ modkey = "Mod4" -- Windows-key
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
+    awful.layout.suit.floating,
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.tile,
     awful.layout.suit.max,
-    awful.layout.suit.floating,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
@@ -182,7 +182,8 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, 
+    {awful.layout.layouts[2], awful.layout.layouts[1], awful.layout.layouts[1], awful.layout.layouts[1]})
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -254,6 +255,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
+    -- Swithing between windows in current tag
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
@@ -266,6 +268,19 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
+    awful.key({ "Mod1",           }, "j",
+        function ()
+            awful.client.focus.byidx( 1)
+        end,
+        {description = "focus next by index", group = "client"}
+    ),
+    awful.key({ "Mod1",           }, "k",
+        function ()
+            awful.client.focus.byidx(-1)
+        end,
+        {description = "focus previous by index", group = "client"}
+    ),
+
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
@@ -280,7 +295,7 @@ globalkeys = gears.table.join(
               {description = "focus the previous screen", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
-    awful.key({ modkey,           }, "Tab",
+    awful.key({ "Mod1"           }, "Tab",
         function ()
             awful.client.focus.history.previous()
             if client.focus then
@@ -424,6 +439,15 @@ for i = 1, 9 do
                         end
                   end,
                   {description = "view tag #"..i, group = "tag"}),
+        awful.key({ "Mod1" }, "#" .. i + 9,
+                  function ()
+                        local screen = awful.screen.focused()
+                        local tag = screen.tags[i]
+                        if tag then
+                           tag:view_only()
+                        end
+                  end,
+                  {description = "view tag #"..i, group = "tag"}),
         -- Toggle tag display.
         awful.key({ modkey, "Control" }, "#" .. i + 9,
                   function ()
@@ -532,7 +556,7 @@ awful.rules.rules = {
 
     -- Set default browser to always map on the tag named "3" on screen 1.
     { rule = { class = browser },
-      properties = { screen = 1, tag = "3" } },
+      properties = { screen = 1, tag = "2" } },
 
     -- Set Obsidian to always map on the tag named "2" on screen 1.
     { rule = { class = "obsidian" },
@@ -611,8 +635,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- awful.spawn.with_shell("xrdb -merge ~/.config/rxvt/config") -- reload config for rxvt-terminal
 os.execute("~/.config/scripts/StartupScript.sh")
 os.execute("xrdb -merge ~/.config/rxvt/config")
-awful.spawn(terminal) 
-awful.spawn.single_instance("obsidian")
+awful.spawn.single_instance("rxvt", {}, function(c) return c.class == "rxvt" end) 
+awful.spawn.single_instance("obsidian", {}, function(c) return c.class == "obsidian" end)
 
 -- }}}
 
