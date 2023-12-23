@@ -94,6 +94,7 @@ ln -f $SCRIPT_PARENT_DIRECTORY/.config/vifm/colors/palenight.vifm ~/.config/vifm
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/scripts/StartupScript.sh ~/.config/scripts/
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/scripts/ShutDownScript.sh ~/.config/scripts/
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/scripts/SysUpdateChecker.sh ~/.config/scripts/
+ln -f $SCRIPT_PARENT_DIRECTORY/.config/scripts/SystemCleanUp.sh ~/.config/scripts/
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/scripts/ZKpushpull.sh ~/.config/scripts/
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/scripts/pushpull_dotfiles.sh ~/.config/scripts/
 
