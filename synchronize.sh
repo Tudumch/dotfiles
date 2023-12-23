@@ -47,6 +47,8 @@ git clone https://github.com/streetturtle/awesome-wm-widgets.git ~/.config/aweso
 
 # redshift
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/redshift/redshift.conf ~/.config/redshift/redshift.conf
+# btop
+ln -f $SCRIPT_PARENT_DIRECTORY/.config/btop/btop.conf ~/.config/btop/btop.conf
 
 # i3lock (screen locker)
 ln -f $SCRIPT_PARENT_DIRECTORY/.config/i3lock/i3lockscript.sh ~/.config/i3lock/
