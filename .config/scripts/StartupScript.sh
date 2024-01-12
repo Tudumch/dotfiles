@@ -14,6 +14,3 @@
 ~/.config/scripts/ZKpushpull.sh pull		
 ~/.config/scripts/ZKpushpull.sh push		
 
-# После синхронизации ZK через Git, Syncthing
-syncthing --no-browser
-
