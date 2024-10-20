@@ -27,18 +27,24 @@ then
     # Считывает ответ пользователя на запрос обновления
     if [[ $answerVAR == "y" ]]
     then
-	echo Updating...
+    echo
+	echo -e "\033[33mUpdating...\033[0m"
+    echo
+    sudo pacman -Sy archlinux-keyring --noconfirm
 	sudo pacman -Syu --noconfirm
     if [ $? -ne 0 ]
     then
-      echo "An error has occured in update process!"
+      echo
+      echo -e "\033[91mAn error has occured in update process! Please update your system manually!\033[0m"
+
       read
       exit 1
     fi
 
 	echo -e "LAST_UPDATE=`date +%m`\n" > ~/.SysUpdateCheck_VARs
-	echo Updates installed!
-	sleep 2
+    echo
+	echo -e "\033[32mUpdates successfully installed! Press ENTER to continue...\033[0m"
+    read
 	clear
     else
 	echo Well, next time then..
